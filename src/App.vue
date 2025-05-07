@@ -25,6 +25,7 @@ const techData = [
     borderColor: "#ff9800",
   }
 ];
+const username="Dev";
 </script>
 
 <template>
@@ -43,14 +44,16 @@ const techData = [
             v-for="(tech, index) in techData"
             :key="index"
             class="tech-card"
-            :style="{ borderTop: `4px solid ${tech.borderColor}` }"
-          >
+            :style="{ borderTop: `4px solid ${tech.borderColor}` }">
             <h3 class="tech-title">{{ tech.title }}</h3>
             <p class="tech-desc">{{ tech.description }}</p>
             <img :src="tech.img" :alt="tech.title" class="tech-img" />
           </div>
         </div>
       </div>
+      <div class="endbox">
+<label>Designed and Developed by {{username}}</label>
+    </div>
     </div>
   </main>
 </template>
